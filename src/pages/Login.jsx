@@ -94,29 +94,13 @@ function Login() {
       {/* USO DE CHAT GPT */}
           <h1>Preguntale algo a Cui! Cui!</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          Enter a prompt:
-          <input
-            type="text"
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-          />
-        </label>
-        <button type="submit">Enviar</button>
-      </form>
+    
 
       {/* Display the response */}
-      <div className="response">
-        <h2>Cui dice:</h2>
-        <p>{response}</p>
-      </div>
+      
       
       </div>
-      <img
-          src="/asistenteCuy.png" 
-          className="asistenteCuy"
-        />
+
     </div>
 
   );
