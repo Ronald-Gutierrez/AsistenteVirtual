@@ -64,10 +64,15 @@ class Ventana_principal extends Component{
                         </div>
                     </div>
                     <h2>Conoce tu cronograma</h2>
+                    <div>
+                        <Calendario/>
+                    </div>
                 </div>
                 <div class="columna columna2">
                     <h2>Revisa tus gastos e ingresos</h2>
-                    
+                    <img src='./src/assets/img/gastos_categoria.png' className='gastoCategoria' alt="Gasto Categoria"></img>
+                    <p>Conoce más de tus gastos e ingresos</p>
+                    <button>Ver más</button>
                 </div>
                 <div class="columna columna3">
                     <h2>Mis productos</h2>
