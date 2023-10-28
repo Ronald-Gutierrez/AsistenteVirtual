@@ -1,69 +1,107 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.image {
+  margin-top: -101px; /* Ajusta el margen superior según tu preferencia */
+  margin-left: -10px; /* Ajusta el margen izquierdo según tu preferencia */
+  position: fixed; /* Cambiado de comillas simples a sin comillas */
+  width: 33.3333333333%;
+  background: url("https://loginunico.viabcp.com/assets/img/ciam/bydefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 100%;
 }
+/* Estilo para la imagen del logo */
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+.logo {
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  margin-top: -101px; /* Ajusta el margen superior según tu preferencia */
 
-body {
-  margin: 0;
+  margin-left: 20px; /* Ajusta el margen izquierdo según tu preferencia */
+  z-index: 1; /* Coloca el logo encima de la imagen de fondo */
+  /* Puedes ajustar los márgenes y otros estilos según tus necesidades */
+}
+.asistenteCuy{
+  margin-top: -5px; 
+  margin-left: 1400px; 
+  width: 18%;
+
+}
+.form-container {
+  flex: 1;
+  padding: 20px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+  justify-content: center; /* Centra verticalmente el contenido */
+  font-family: 'Ubuntu', sans-serif;  
+  margin-left: 500px; /* Ajusta el margen izquierdo según tu preferencia */
+  margin-top: 100px; /* Ajusta el margen superior según tu preferencia */
+
+}
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+/* Estilo para los radios de "Persona" y "Empresa" */
+.form-container label input[type="radio"] {
+  margin-right: 10px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Estilo para los campos de entrada de texto */
+.form-container label input[type="text"],
+.form-container label input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #beb5b5;
+  border-radius: 4px;
+}
+
+/* Estilo para el checkbox "Recordar datos" */
+.form-container label input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Estilo para el botón "Continuar" con fondo naranja */
+.orange-button {
+  background-color: #ff7800;
+  color: white;
+  padding: 10px 150px; /* Aumenta el relleno para hacerlo más largo y ancho */
+  border: none;
+  border-radius: 40px; /* Aumenta el radio del borde para hacerlo más largo y ancho */
   cursor: pointer;
-  transition: border-color 0.25s;
+  font-size: 16px;
+  margin-top: 10px;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Estilo para el título "BANCA POR INTERNET" */
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #002a8d; /* Cambia el color del texto a azul */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+/* Estilo para el código de Captcha */
+.form-container label input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #beb5b5;
+  border-radius: 4px;
 }
+
+
+/* Estilo para el formulario */
+.form-container {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Estilo para el título "BANCA POR INTERNET" */
+.form-container h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
