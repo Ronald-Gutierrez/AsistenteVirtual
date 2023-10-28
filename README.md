@@ -113,3 +113,7 @@ Para este proyecto se modifico la sintaxis, ya que ChatGPT se encontraba anterio
 Agradecemos a todos los miembros del equipo y a la comunidad de código abierto que han contribuido a este proyecto.
 
 ---
+
+## Video del Demo
+
+[CUIA: Tu asistente Financiero](https://drive.google.com/file/d/11CHsXJXtq1m7bQhGjBww8OuUsKxEwIM6/view) 
