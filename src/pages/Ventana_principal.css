@@ -39,16 +39,16 @@
     max-width: 50%;
     height: auto;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 40px;
 }
-.contenedor .barra-navegacion .opcione{
+.contenedor .barra-navegacion .opciones{
     margin-top: 10px;
-    margin-left: -20px;
+    margin-left: 920px;
 }
 
 .columna {
     padding: 20px;
-    
+    margin-top: 50px;
 }
 
 h2 {
@@ -60,6 +60,12 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr); 
     grid-gap: 10px; /* Espacio entre los recuadros */
+    width: 280px;
+}
+
+.contenedor .columna.columna1 .matriz .recuadro{
+    max-width: 100px;
+    height: auto;
 }
 
 .contenedor .columna.columna3 .matriz_producto {
@@ -84,22 +90,22 @@ h2 {
 }
 .contenedor .columna.columna3 .matriz_producto .recuadro .cuentaAhorro {
     color: black;
-    margin-top: -70px;
+    margin-top: -60px;
     margin-left: -150px;
 }
 .contenedor .columna.columna3 .matriz_producto .recuadro .soles {
     color: black;
-    margin-top: -57px;
+    margin-top: -50px;
     margin-left: 230px;
 }
 .contenedor .columna.columna3 .matriz_producto .recuadro .cuenta {
     color: black;
-    margin-top: -20px;
+    margin-top: -15px;
     margin-left: -150px;
 }
 .contenedor .columna.columna3 .matriz_producto .recuadro .saldo {
     color: black;
-    margin-top: -42px;
+    margin-top: -35px;
     margin-left: 220px;
 }
 .contenedor .columna.columna3 .matriz_producto .recuadro .bcp {
@@ -125,3 +131,29 @@ h2 {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.contenedor .columna.columna2 {
+    margin-top: 50px;
+    margin-left: -250px;
+    width: 300px;
+}
+
+
+.contenedor .columna.columna2 .gastoCategoria {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 50%;
+}
+.contenedor .columna.columna2 p {
+    color:orange ;
+}
+
+.contenedor .columna.columna2 button {
+    margin-top: -70px;
+    margin-left: 290px;
+    border-radius: 10px;
+    width: 70px;
+}
