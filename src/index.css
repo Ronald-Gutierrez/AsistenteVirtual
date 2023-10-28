@@ -17,10 +17,8 @@
   width: 5%;
   height: 10%;
   margin-top: -101px; /* Ajusta el margen superior según tu preferencia */
-
   margin-left: 20px; /* Ajusta el margen izquierdo según tu preferencia */
   z-index: 1; /* Coloca el logo encima de la imagen de fondo */
-  /* Puedes ajustar los márgenes y otros estilos según tus necesidades */
 }
 .asistenteCuy{
   margin-top: -5px; 
@@ -85,14 +83,6 @@
 }
 
 
-/* Estilo para el código de Captcha */
-.form-container label input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #beb5b5;
-  border-radius: 4px;
-}
 
 
 /* Estilo para el formulario */
@@ -103,5 +93,79 @@
 /* Estilo para el título "BANCA POR INTERNET" */
 .form-container h1 {
   font-family: 'Ubuntu', sans-serif;
+}
+/* Desenfoque Ventana emergente */
+/* Estilos para el fondo difuminado cuando la ventana modal está abierta */
+body.blur {
+  filter: blur(5px); /* Ajusta la intensidad del efecto de desenfoque según tus preferencias */
+  pointer-events: none;
+}
+
+/* Estilos para la ventana modal */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(53, 50, 50, 0.7); /* Fondo semitransparente */
+  
+}
+
+.modal-content {
+  background-color: #34a7ee; /* Fondo blanco semitransparente */
+  margin: 5% auto;
+  padding: 20px;
+  border: px solid #ffffff;
+  width: 70%; /* Ajusta el ancho de la ventana modal según tus preferencias */
+  height: 70%; /* Ajusta la altura de la ventana modal según tus preferencias */
+  max-width: 800px; /* Establece un ancho máximo si lo deseas */
+  position: relative;
+  border-radius: 40px; /* Aumenta el radio del borde para hacerlo más largo y ancho */
+
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-content .blue-button {
+  background-color: #002a8d;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 100px;
+  margin-left: 100px;
+  position: absolute; /* Cambiar a posición absoluta */
+  bottom: 32px; /* Alineación inferior fija */
+  right: 180px; /* Alineación derecha fija */
+  
+}
+
+.inputModal {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #837de2;
+  border-radius: 15px;
+  background-color: #7094f0;
+  margin-top: 500px;
+  margin-left: 30px;
+  position: absolute; /* Cambiar a posición absoluta */
+  bottom: 20px; /* Alineación inferior fija */
+
+}
+.inputModal::placeholder {
+  color: #000000; /* Cambia el color del marcador de posición a rojo (#FF0000) */
 }
 

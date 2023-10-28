@@ -33,6 +33,14 @@ class Login extends Component {
     // Aquí puedes agregar la lógica para procesar los datos del formulario
   }
 
+  //desenfoque
+  openModal = () => {
+    this.setState({ isModalOpen: true });
+  }
+
+  closeModal = () => {
+    this.setState({ isModalOpen: false });
+  }
   render() {
     return (
       
@@ -49,28 +57,7 @@ class Login extends Component {
         <div className="form-container">
           <h1>Banca por Internet</h1><br />
           <form onSubmit={this.handleSubmit}>
-            <div>
-              <label>
-                <input
-                  type="radio"
-                  name="userType"
-                  value="Persona"
-                  checked={this.state.userType === 'Persona'}
-                  onChange={this.handleUserTypeChange}
-                />
-                Persona
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="userType"
-                  value="Empresa"
-                  checked={this.state.userType === 'Empresa'}
-                  onChange={this.handleUserTypeChange}
-                />
-                Empresa
-              </label>
-            </div><br />
+            
             <div>
               <label>
               <select
@@ -83,6 +70,7 @@ class Login extends Component {
                   <option value="PAS">PAS</option>
                 
                 </select>
+                
                 <input
                   type="text"
                   name="identification"
@@ -127,12 +115,83 @@ class Login extends Component {
             <button className="orange-button" type="submit">Continuar</button>
           </form>
           
-        </div>
-        <img src={asistenteCuy} className="asistenteCuy" alt="Logo" />
+          </div>
+        <img
+          src={asistenteCuy}
+          className="asistenteCuy"
+          alt="LogoAsistente"
+          onClick={this.openModal}
+        />
 
+        {this.state.isModalOpen && (
+          <div className="modal">
+            <div className="modal-content">
+              <span className="close" onClick={this.closeModal}>&times;</span>
+              <ul>
+                <li>¿Cómo puedo sacar una linea de credito?</li>
+                <li>¿Cómo puedo ahorrar mejor mi dinero?</li>
+                <li>¿Cuánto de dinero e gastado este mes?</li>
+                <li>¿Cuánto de ingreso e tenido este mes?</li>
+              </ul>
+              <input className='inputModal'
+                  type="text"
+                  name="preguntaText"
+                  placeholder="Escribe lo que quieres preguntarle a CUIA"
+                  value={this.state.preguntaText}
+                  onChange={this.handleInputChange}
+
+
+                />
+              <button className="blue-button" type="submit">Enviar</button>
+              
+            </div>
+          </div>
+        )}
       </div>
     );
   }
 }
+function App() {
+  const [prompt, setPrompt] = useState('');
+  const [response, setResponse] = useState('');
 
-export default Login;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post('http://localhost:8080/chat', { prompt })
+      .then((res) => {
+        setResponse(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  return (
+    <div className="App">
+      <h1>Chat with GPT-3</h1>
+
+      {/* Form for entering a prompt */}
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter a prompt:
+          <input
+            type="text"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+
+      {/* Display the response */}
+      <div className="response">
+        <h2>Response:</h2>
+        <p>{response}</p>
+      </div>
+    </div>
+  );
+}
+
+export default {Login, app};
