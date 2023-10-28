@@ -1,0 +1,127 @@
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #3c1bce;
+}
+  
+.logo img {
+    height: 40px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+  
+.opciones span {
+    margin-left: 20px; /* Ajusta el espacio entre las opciones */
+    cursor: pointer;
+    color: white;
+}
+
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-rows: 100vh;
+    height: 70%;
+}
+
+.contenedor .barra-navegacion{
+    position:absolute;
+    height: 50px;
+    margin-top: 0px;
+    margin-left: -35px;
+}
+.contenedor .barra-navegacion .logo{
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.contenedor .barra-navegacion .opcione{
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+.columna {
+    padding: 20px;
+    
+}
+
+h2 {
+    color: #3c1bce;
+}
+
+.contenedor .columna.columna1 .matriz {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    grid-gap: 10px; /* Espacio entre los recuadros */
+}
+
+.contenedor .columna.columna3 .matriz_producto {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); 
+    grid-gap: 10px; /* Espacio entre los recuadros */
+}
+.contenedor .columna.columna1 .matriz .recuadro img{
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.contenedor .columna.columna1 .matriz .recuadro p{
+    margin-top: 10px;
+}
+
+
+.contenedor .columna.columna3 .matriz_producto .recuadro{
+    margin-left: 150px;
+    width: 350px;
+}
+.contenedor .columna.columna3 .matriz_producto .recuadro .cuentaAhorro {
+    color: black;
+    margin-top: -70px;
+    margin-left: -150px;
+}
+.contenedor .columna.columna3 .matriz_producto .recuadro .soles {
+    color: black;
+    margin-top: -57px;
+    margin-left: 230px;
+}
+.contenedor .columna.columna3 .matriz_producto .recuadro .cuenta {
+    color: black;
+    margin-top: -20px;
+    margin-left: -150px;
+}
+.contenedor .columna.columna3 .matriz_producto .recuadro .saldo {
+    color: black;
+    margin-top: -42px;
+    margin-left: 220px;
+}
+.contenedor .columna.columna3 .matriz_producto .recuadro .bcp {
+    max-width: 10%;
+    height: auto;
+    margin-top: -5px;
+    margin-left: -420px;
+}
+.contenedor .columna.columna3 .matriz_producto .recuadro {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 50px;
+}
+
+.contenedor .columna.columna1 .matriz .recuadro {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
